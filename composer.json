@@ -1,0 +1,10 @@
+{
+  "autoload": {
+    "psr-4": {
+      "workpayment\\": "vendor/workpayment/core",
+      "app\\": "app"
+    }
+  },
+  "require": {
+  }
+}
