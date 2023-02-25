@@ -29,6 +29,7 @@ class ErrorHandler
     {
         $this->logErrors($e->getMessage(), $e->getFile(), $e->getLine());
         $this->displayError('Исключение', $e->getMessage(), $e->getFile(), $e->getLine(), $e->getCode());
+        return true;
     }
 
     // метод для логирования ошибок

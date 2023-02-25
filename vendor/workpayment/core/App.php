@@ -12,13 +12,14 @@ class App
      */
     public function __construct()
     {
+        // получаем адрес из строки браузера
         $query = trim($_SERVER['QUERY_STRING'], '/');
         session_start();
-        //set_time_limit(0);
+        //set_time_limit(0); // для сброса ограничений на время выполнения операции
         self::$app = Registry::instance();
         $this->getParams();
         new ErrorHandler();
-        //Router::dispatch($query);
+        Router::dispatch($query); // передаем маршрутизатору запрошенный адрес
     }
 
     /**
