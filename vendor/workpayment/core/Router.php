@@ -53,7 +53,7 @@ class Router
     /**
      * Метод вызывающий соответствующие маршруту Controller и Action
      * @param $url string Запрошенный url-адрес
-     * @throws \Exception Если что-то не найдено
+     * @throws Exception Если что-то не найдено
      */
     public static function dispatch($url)
     {
@@ -73,7 +73,7 @@ class Router
                 if (method_exists($controllerObject, $action))
                 {   // если метод существует вызываем его
                     $controllerObject->$action();
-                    //$controllerObject->getView();
+                    $controllerObject->getView();
                 }
                 else
                 {   // если метод не существует - Ошибка
@@ -82,12 +82,13 @@ class Router
             }
             else
             {   // если класса Controller нет - Ошибка
+                debug($url); die;
                 throw new \Exception("Контроллер $controller не найден", 400);
             }
         }
         else
         {   // если в таблице маршрутов не найдено соотвествие - Ошибка
-            throw new \Exception("Страница не найдена", 404);
+            throw new \Exception("Не найден маршрут в таблице маршрутов", 400);
         }
     }
 

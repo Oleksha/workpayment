@@ -6,4 +6,3 @@ require_once CONF . '/routes.php';
 
 new \workpayment\App();
 
-debug(\workpayment\Router::getRoutes());

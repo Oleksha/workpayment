@@ -6,17 +6,38 @@ namespace workpayment\base;
  * Class Controller - базовый класс код из которого будет выполняться во
  * всех других контроллерах через контролеер приложения AppController
  */
-abstract class Controller {
+abstract class Controller
+{
 
     /**
      * Данные о текущем маршруте
      * @var array
      */
     public $route;
-    public $controller; //
+    /**
+     * Текущий Controller
+     * @var string
+     */
+    public $controller;
+    /**
+     * Текущая Model
+     * @var string
+     */
     public $model;
+    /**
+     * Текущий View
+     * @var string
+     */
     public $view;
+    /**
+     * Текущий шаблон
+     * @var string
+     */
     public $layout;
+    /**
+     * Текущий префикс
+     * @var string
+     */
     public $prefix;
     /**
      * Данные передающиеся из контроллера в вид
@@ -30,13 +51,14 @@ abstract class Controller {
      * keywords - ключевые слова используемые на странице
      * @var array
      */
-    public $meta = ['title' => '', 'description' => '', 'keywords' => ''];  //
+    public $meta = ['title' => '', 'description' => '', 'keywords' => ''];
 
     /**
      * Конструктор класса
      * @param $route array текщий маршрут
      */
-    public function __construct($route) {
+    public function __construct($route)
+    {
         $this->route = $route;
         $this->controller = $route['controller'];
         $this->model = $route['controller'];
@@ -45,24 +67,31 @@ abstract class Controller {
     }
 
     /**
-     * @return mixed
+     * Получает объект вида и вызывает его метод Render
      */
-    public function getView() {
+    public function getView()
+    {
         $viewObject = new View($this->route, $this->layout, $this->view, $this->meta);
         $viewObject->render($this->data);
     }
 
     /**
+     * Запись данных для передачи в вид
      * @param array $data
      */
-    public function set($data) {
+    public function set($data)
+    {
         $this->data = $data;
     }
 
     /**
-     * @param array $meta
+     * Запись meta-данных для передачи в вид
+     * @param $title string Заголовок страницы
+     * @param $desc string Описание  страницы
+     * @param $keywords string Ключевые слова
      */
-    public function setMeta($title = '', $desc = '', $keywords = '') {
+    public function setMeta($title = '', $desc = '', $keywords = '')
+    {
         $this->meta['title'] = $title;
         $this->meta['description'] = $desc;
         $this->meta['keywords'] = $keywords;
@@ -75,7 +104,6 @@ abstract class Controller {
     /**
      * @param $view string самм вид который требуется загрузить
      * @param $vars array набор параметров для передачи в вид
-     * @return void загружает указанный вид
      */
     public function loadView($view, $vars = []) {
         extract($vars);

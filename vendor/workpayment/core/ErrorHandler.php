@@ -23,12 +23,11 @@ class ErrorHandler
 
     /**
      * Метод обрабатывающий перехваченные исключения
-     * @param $e \Exception объект, представляющий выброшенное исключение
      */
-    public function exceptionHandler($e)
+    public function exceptionHandler($errno, $errstr, $errfile, $errline): bool
     {
-        $this->logErrors($e->getMessage(), $e->getFile(), $e->getLine());
-        $this->displayError('Исключение', $e->getMessage(), $e->getFile(), $e->getLine(), $e->getCode());
+        //$this->logErrors($errstr, $errfile, $errline);
+        $this->displayError($errno, $errstr, $errfile, $errline);
         return true;
     }
 
@@ -53,15 +52,15 @@ class ErrorHandler
      * @param $errline string строка, в которой возникло исключение
      * @param $responce integer код ошибки отправляемый заголовку браузера, по умолчанию 404
      */
-    protected function displayError($errno, $errstr, $errfile, $errline, $responce = 404)
+    protected function displayError($errno, $errstr, $errfile, $errline, $response = 500)
     {
-        http_response_code($responce); // сообщаем браузеру код ошибки
+        http_response_code($response); // сообщаем браузеру код ошибки
         // Подключаем соответствующий шаблон вывода ошибки
-        if ($responce == 404 && !DEBUG) {
+        /*if ($response == 404 && !DEBUG) {
             // сюда попадают конечные пользователи работающие с прложением
             require WWW . '/errors/404.php';
             die;
-        }
+        }*/
         if (DEBUG) {
             require WWW . '/errors/dev.php';
         } else {

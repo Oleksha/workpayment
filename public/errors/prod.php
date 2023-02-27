@@ -1,167 +1,101 @@
-<!--A Design by W3layouts
-Author: W3layout
+<!--
+Author: W3layouts
 Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0
-License URL: http://creativecommons.org/licenses/by/3.0/
 -->
-<!DOCTYPE HTML>
-<html lang="ru">
+<!DOCTYPE html>
+<html lang="zxx">
+
 <head>
-    <title>Ошибка</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500&display=swap" rel="stylesheet">
-    <style>
-        body{
-            font-family: 'Comfortaa', cursive;
-        }
-        body{
-            background:#DAD6CC;
-        }
-        .wrap{
-            margin:0 auto;
-            width:1000px;
-        }
-        .logo h1{
-            font-size:200px;
-            color:#FF7A00;
-            text-align:center;
-            margin-bottom:1px;
-            text-shadow:4px 4px 1px white;
-        }
-        .logo p{
-            color:#B1A18D;
-            font-size:20px;
-            margin-top:1px;
-            text-align:center;
-        }
-        .logo p span{
-            color:lightgreen;
-        }
-        .sub a{
-            color:#ff7a00;
-            text-decoration:none;
-            padding:5px;
-            font-size:13px;
-            font-family: arial, serif;
-            font-weight:bold;
-        }
-        .footer{
-            color:white;
-            position:absolute;
-            right:10px;
-            bottom:10px;
-        }
-        .footer a{
-            color:#ff7a00;
-        }
+    <title>Произошла ошибка</title>
+    <!-- Meta tag Keywords -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="keywords"
+          content="Fog error web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <!-- //Meta tag Keywords -->
 
-        @media (max-width:1024px) {
-            .logo h1 {
-                font-size: 170px;
-                margin-top: 140px
-            }
-            .wrap {
-                width:100%;
-            }
-            .footer {
-                font-size:14px;
-                line-height: 30px;
-            }
-        }
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Sofia+Sans+Semi+Condensed:wght@400;700&display=swap" rel="stylesheet">
 
-        @media (max-width: 991px) {
-            .logo h1 {
-                font-size: 150px;
-            }
-        }
+    <!-- //google fonts -->
 
-        @media (max-width: 768px) {
-            body {
-                display:-webkit-flex;
-                display:flex;
-                align-items: center;
-                justify-content: center;
-                height: 100vh;
-                padding: 0;
-                margin: 0;
-            }
-            .logo h1 {
-                margin-top: 0
-            }
-            .footer {
-                right:0;
-                width:100%;
-                text-align:center;
-            }
-        }
+    <!--/Style-CSS -->
+    <link rel="stylesheet" href="/errors/css/style.css" type="text/css" media="all" />
+    <!--//Style-CSS -->
 
-        @media (max-width: 736px) {
-            .logo h1 {
-                font-size: 120px;
-            }
-        }
-
-        @media (max-width: 600px) {
-            .logo h1 {
-                font-size: 100px;
-            }
-        }
-
-        @media (max-width: 568px) {
-            .logo p {
-                font-size:15px;
-                margin-bottom:5px;
-                margin-top:1px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .logo p {
-                margin-bottom:10px;
-            }
-        }
-
-        @media (max-width: 384px) {
-            .footer {
-                font-size: 13px;
-                line-height: 25px;
-            }
-        }
-
-        @media (max-width: 320px) {
-            .logo h1 {
-                font-size: 90px;
-            }
-            .logo p {
-                font-size: 14px;
-                margin-top:10px;
-                margin-bottom:15px;
-            }
-            .footer {
-                right: 10px;
-                left: 10px;
-                width: 94%;
-            }
-        }
-    </style>
+    <!--/fontAwesome-CSS -->
+    <link rel="stylesheet" href="/errors/css/fontAwesome.css" type="text/css" media="all" />
+    <!--/fontAwesome-CSS -->
 </head>
 
-
 <body>
-<div class="wrap">
-    <div class="logo">
-        <h1>404</h1>
-        <p>Произошла ошибка</p>
-        <div class="sub">
-            <p><a href="<?= PATH?>">На главную страницу</a></p>
+<div class="w3l-error-block">
+
+    <div class="page">
+        <div class="content">
+            <div class="logo">
+                <a class="brand-logo" href="new.html">Fog Error</a>
+                <!--if logo is image enable this
+           <a class="brand-logo" href="#new.html">
+               <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
+           </a>
+       -->
+            </div>
+            <div class="w3l-error-grid">
+                <h1>404</h1>
+                <h2>Произошла ошибка</h2>
+                <!--<p><b>Номер ошибки:</b> <?= $errno ?></p>
+                <p><b>Текст ошибки:</b> <?= $errstr ?></p>
+                <p><b>Файл с ошибкой:</b> <?= $errfile ?></p>
+                <p><b>Строка, в которой произошла ошибка:</b> <?= $errline ?></p>-->
+                <!--<p>I tried to catch some fog, but i missed it</p>-->
+                <a href="new.html" class="home">На главную</a>
+            </div>
+
+            <div class="copy-right text-center">
+                <p>© 2020 Fog error. All rights reserved | Design by
+                    <a href="http://w3layouts.com/" target="_blank">W3layouts</a></p>
+            </div>
         </div>
+        <img src="/errors/images/bg.jpg" class="img-responsive" alt="error image" />
     </div>
-</div>
 
-<div class="footer">
-    &copy 2012 Funky 404 . All Rights Reserved | Design by<a href="https://w3layouts.com">W3layouts</a>
-</div>
+    <script src="/errors/js/jquery-3.3.1.min.js"></script>
+    <script>
+        var lFollowX = 0,
+            lFollowY = 0,
+            x = 0,
+            y = 0,
+            friction = 1 / 30;
 
+        function animate() {
+            x += (lFollowX - x) * friction;
+            y += (lFollowY - y) * friction;
+
+            translate = 'translate(' + x + 'px, ' + y + 'px) scale(1.1)';
+
+            $('img').css({
+                '-webit-transform': translate,
+                '-moz-transform': translate,
+                'transform': translate
+            });
+
+            window.requestAnimationFrame(animate);
+        }
+
+        $(window).on('mousemove click', function (e) {
+
+            var lMouseX = Math.max(-100, Math.min(100, $(window).width() / 2 - e.clientX));
+            var lMouseY = Math.max(-100, Math.min(100, $(window).height() / 2 - e.clientY));
+            lFollowX = (20 * lMouseX) / 100; // 100 : 12 = lMouxeX : lFollow
+            lFollowY = (10 * lMouseY) / 100;
+
+        });
+
+        animate();
+    </script>
+</div>
 </body>
+
+</html>
